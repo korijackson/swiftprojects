@@ -98,7 +98,7 @@ struct ContentView: View {
                 askQeustion()
             }
         } else {
-            scoreTitle = "Wrong! That is the flag of \(countries[correctAnswer])"
+            scoreTitle = "Wrong! That is the flag of \(countries[number])"
             showingScore = true
             rounds += 1
         }
