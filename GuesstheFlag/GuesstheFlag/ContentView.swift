@@ -71,7 +71,7 @@ struct ContentView: View {
 
                 Spacer()
                 Spacer()
-                Text("Score: \(score) / 8")
+                Text("Score: \(score) / 10")
                     .foregroundStyle(.white)
                     .font(.title.bold())
 
@@ -92,15 +92,20 @@ struct ContentView: View {
         if number == correctAnswer {
             score += 1
             rounds += 1
-            if rounds == 8 {
+            if rounds == 10 {
                 endOfGame = true
             } else {
                 askQeustion()
             }
         } else {
-            scoreTitle = "Wrong! That is the flag of \(countries[number])"
-            showingScore = true
-            rounds += 1
+            if rounds == 10 {
+                endOfGame = true
+            } else {
+                scoreTitle = "Wrong! That is the flag of \(countries[number])"
+                showingScore = true
+                rounds += 1
+            }
+
         }
     }
 

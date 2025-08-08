@@ -129,7 +129,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                Section("Tip Ammount"){
+                Section("Tip Amount"){
                     //.naviagtionLink can be used instead of .segmented to allow for a wider range of numbers
                     //.segmented - allows for the horizontal numbers
                     Picker("Tip percent", selection: $tipPercent){
